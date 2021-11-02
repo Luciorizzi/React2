@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=IBM+Plex+Serif:wght@700&display=swap');
+
+h1{
+    text-align: center;
+   color: black;
+   font-size: 90px;
+   font-family: 'EB Garamond', serif;
+   font-family: 'IBM Plex Serif', serif;
+
+}
+
+p{
+    padding-top: 60pt;
+    font-size: 16px;
+    font-family: 'EB Garamond', serif;
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.homediv{
+    display: flex;
+    justify-content: space-around;
+list-style: none;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'EB Garamond', serif;
+   font-family: 'IBM Plex Serif', serif;
+}

@@ -1,0 +1,28 @@
+
+    { "Data":[
+    {
+      "id": 1,
+      "title": "Buzo Rojo",
+      "price": "$890",
+      "pictureUrl": "https://i.imgur.com/LoV9GY1.jpg?2"
+    },
+    {
+      "id": 2,
+      "title": "Buzo Azul",
+      "price": "$870",
+      "pictureUrl": "https://i.imgur.com/LoV9GY1.jpg?2"
+    },
+    {
+      "id": 3,
+      "title": "Buzo Crema",
+      "price": "$860",
+      "pictureUrl": "https://i.imgur.com/LoV9GY1.jpg?2"
+    },
+    {
+      "id": 4,
+      "title": "Buzo Celeste",
+      "price": "$820",
+      "pictureUrl": "https://i.imgur.com/LoV9GY1.jpg?2"
+    }
+  ]
+}

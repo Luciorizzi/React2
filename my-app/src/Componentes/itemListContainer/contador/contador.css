@@ -1,0 +1,50 @@
+.contador{
+  display: flex;
+  margin: auto;
+  width: 200px;
+  height: 50px;
+  border: solid 0.5px lightgray;
+}
+#numero{
+    display: flex;
+    margin: auto;
+}
+
+.agregar{
+    display: flex;
+    margin: auto;
+}
+
+.containerAgregar{
+    margin-top: 10pt;
+}
+
+.containerAll{
+    width: 200px;
+    margin: auto;
+   
+
+}
+
+
+.button{
+    color: black;
+    border: solid 0.5px lightgray;
+    background-color: white;
+}
+
+.button:hover{
+background-color: lightgray;
+}
+
+.X{
+    display:inline;
+    margin-left: 90%;
+    color: black;
+    background-color: white;
+    border: none;
+}
+
+.X:hover{
+    background-color: rgb(221, 94, 94);
+    }
