@@ -18,6 +18,7 @@ function Cart() {
     clearCount();
   };
  
+
   return (
     <div>
       <p>Carrito</p>
@@ -29,7 +30,7 @@ function Cart() {
 }
 
       {cart.length &&
-        cart.map((producto) => <ItemCart key={producto} producto={producto}  />  ) }
+         cart.map((producto) => <ItemCart key={producto} producto={producto}  />    ) }
       {!cart.length && (
         <>
           <p>No has agregado ningun producto! </p>

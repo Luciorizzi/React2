@@ -20,7 +20,7 @@ function RenderItemCount({ detail }) {
   
       const addToCart =() => {
         setRenderCount(false);
-        setCart([...cart, producto.select]);
+        setCart([...cart, producto.select], producto.cantidad);
    console.log(producto.cantidad)
     }
 
