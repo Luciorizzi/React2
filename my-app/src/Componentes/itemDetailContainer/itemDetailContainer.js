@@ -40,7 +40,7 @@ const ItemDetailContainer= () => {
   const [detail, getDetail] = useState(productos);
   const { id: idDetalles } = useParams();
 
-  console.log(detail)
+
 
   const productsFilter = () => {
   
@@ -48,7 +48,7 @@ const ItemDetailContainer= () => {
    
 
     getDetail(get_Detail)
-    console.log(get_Detail)
+  
   } 
 
   useEffect(() => {
@@ -70,5 +70,5 @@ const ItemDetailContainer= () => {
 
 }
 
-console.log(ItemDetailContainer)
+
 export default ItemDetailContainer;

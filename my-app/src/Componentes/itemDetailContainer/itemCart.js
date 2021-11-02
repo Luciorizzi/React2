@@ -4,11 +4,11 @@ import { CountCtxt } from "../context/countCtxt";
 
 
 
-const ItemCart = ({detail}) => {
+const ItemCart = ({producto}) => {
 
 const {cart,setCart} = useContext(Cartctxt)
 const {count}= useContext(CountCtxt)
-const {id} = detail
+const {id} = producto
 
 
 
@@ -31,11 +31,11 @@ return ( <div className="classCart">
     <button  className=" X " onClick={() => removeItem(id )}>X</button>
       <p className="description">Detalles del producto:  </p>
     
-      <img className="img" alt="" src={detail.pictureUrl} />
-      <p className="description">{detail.title} </p>
-      <div className="description">$ {detail.price * count}</div>
-      <div className="description">{detail.tela} </div>
-      <p>Cantidad {} </p>
+      <img className="img" alt="" src={producto.pictureUrl} />
+      <p className="description">{producto.title} </p>
+      <div className="description">$ {producto.price * count}</div>
+      <div className="description">{producto.tela} </div>
+      <p>Cantidad : {producto.cantidad} </p>
       
     </div>
     
