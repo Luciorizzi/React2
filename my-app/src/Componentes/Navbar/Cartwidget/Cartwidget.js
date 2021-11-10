@@ -1,15 +1,18 @@
 
 import "./Cartwidget.css"
 import { useContext } from "react";
-import { CountCtxt } from "../../context/countCtxt";
+import { Cartctxt } from "../../context/context";
 
 
 
 
 const Carrito = () => {
   
-    const {count} = useContext(CountCtxt);
-        return <>{count >= 1 && <div className="carrito"> <img src="https://i.imgur.com/2zH7Oz3.png?1" title="source: imgur.com" alt="carrito" /> <p className="carrito">{count} </p></div>}
+    const { cart } = useContext(Cartctxt);
+  
+
+
+        return <>{cart.length >= 1 && <div className="carrito"> <img src="https://i.imgur.com/2zH7Oz3.png?1" title="source: imgur.com" alt="carrito" /> <p className="carrito">{cart.length} </p></div>}
        
         </>
 

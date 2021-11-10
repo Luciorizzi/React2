@@ -2,31 +2,46 @@ import { useContext, useState } from "react/cjs/react.development";
 import Botones from "./contador";
 import { Cartctxt } from "../../context/context";
 import { CountCtxt } from "../../context/countCtxt";
-import ItemCart from "../../itemDetailContainer/itemCart";
+
 
 function RenderItemCount({ detail }) {
   const [renderCount, setRenderCount] = useState(true);
 
+  
   const { count, setCount } = useContext(CountCtxt);
   const { cart, setCart } = useContext(Cartctxt);
 
 
-  const producto = {select : detail, cantidad:count}
+  
 
+  const addToCart = (detail) => {
+    console.log(`detail`, detail);
+    const producto = { select: detail, cantidad:count, id: detail.id };
+    console.log(`producto`, producto);
+
+    setCount(1)
+
+     const check = cart.length  &&  cart.find((producto) => producto.id === detail.id);
  
+ ;
+    console.log( `check`, check);
 
 
+    if (check === 0  || check === undefined) {
+      setRenderCount(false);
+      setCart([...cart, producto]);
+    } else{
+      setRenderCount(false);
+     producto.cantidad   = check.cantidad + count
 
+      setCart ([...cart, producto])
   
-      const addToCart =() => {
-        setRenderCount(false);
-        setCart([...cart, producto.select], producto.cantidad);
-   console.log(producto.cantidad)
+   
+
     }
-
-
-  
-
+    console.log(`cart`,cart);
+    
+  };
   return (
     <div>
       {renderCount && (
@@ -37,7 +52,10 @@ function RenderItemCount({ detail }) {
             </div>
           </div>
           <div className="containerAgregar">
-            <button onClick={() =>  addToCart(producto)} className="agregar button">
+            <button
+              onClick={() => addToCart(detail)}
+              className="agregar button"
+            >
               Agregar al carrito
             </button>
           </div>

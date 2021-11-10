@@ -66,5 +66,5 @@ function ItemList() {
    </div>
   );
 }
-console.log(ItemList)
+
 export default ItemList;
