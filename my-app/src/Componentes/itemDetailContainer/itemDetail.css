@@ -17,7 +17,17 @@
     box-shadow: 20px 20px 15px 1px rgb(190, 187, 187);
     padding-top: 10px;
     margin-left: 40%;
+    
  }
+ .contenedor2{
+    width: 400px;
+    height: 650px;
+   box-shadow: 20px 20px 15px 1px rgb(190, 187, 187);
+   padding-top: 10px;
+   margin-left: 50px;
+   
+   
+}
  
  
  .img{

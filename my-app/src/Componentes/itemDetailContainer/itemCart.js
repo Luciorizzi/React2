@@ -1,26 +1,25 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useState } from "react/cjs/react.development";
 import { Cartctxt } from "../context/context";
 
-
-const ItemCart = ({ producto, cantidad}) => {
+const ItemCart = ({ producto, cantidad }) => {
   const { cart, setCart } = useContext(Cartctxt);
- const {id} = producto
-const [cant , setCant ] = useState(cantidad)
+  const { id } = producto;
+  const [cant, setCant] = useState();
 
- console.log(producto)
+  console.log(producto);
   const removeItem = () => {
     const item = cart.filter((producto) => producto.id !== id);
     setCart(item);
     console.log(item);
   };
 
-
-
-
+  useEffect(() => {
+    setCant(cantidad);
+  }, [cantidad]);
   return (
     <div className="classCart">
-      <div className="contenedor1">
+      <div className="contenedor2">
         <button className=" X " onClick={() => removeItem(id)}>
           X
         </button>
@@ -30,7 +29,7 @@ const [cant , setCant ] = useState(cantidad)
         <p className="description">{producto.title} </p>
         <div className="description">$ {producto.price * cantidad}</div>
         <div className="description">{producto.tela} </div>
-        <p>Cantidad : {cant} </p>
+        <p className="description">Cantidad : {cant} </p>
       </div>
     </div>
   );

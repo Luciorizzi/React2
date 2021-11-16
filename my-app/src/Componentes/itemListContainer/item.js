@@ -8,7 +8,7 @@ function Item({ item }) {
         <Link to={`/item/${item.id}`}>
           <img className="img"  alt=""src={item.pictureUrl} />
           <p className="description">{item.title} </p>
-          <div className="description">{item.price}</div>
+          <div className="description">{ "$" + item.price}</div>
         </Link>
       
        

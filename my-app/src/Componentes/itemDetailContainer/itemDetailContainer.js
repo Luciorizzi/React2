@@ -1,74 +1,56 @@
-
 import { useEffect } from "react";
 import { useParams } from "react-router";
 import { useState } from "react/cjs/react.development";
 import ItemDetail from "./itemDetail";
 import "./itemDetail.css";
+import { getFirestore } from "../../firebase/index";
+import { collection, query, where, getDocs } from "firebase/firestore";
 
-let productos = [
-  {
-    id: 1,
-    title: "Buzo Rojo",
-    price: "890",
-    pictureUrl: "https://i.imgur.com/LoV9GY1.jpg?2",
-    tela: "Algodon",
-  },
-  {
-    id: 2,
-    title: "Buzo Azul",
-    price: "870",
-    pictureUrl: "https://i.imgur.com/aqMpiFN.jpg?1",
-    tela: "Algodon",
-  },
-  {
-    id: 3,
-    title: "Buzo Crema",
-    price: "860",
-    pictureUrl: "https://i.imgur.com/4vD58zI.jpg",
-    tela: "Algodon",
-  },
-  {
-    id: 4,
-    title: "Buzo Celeste",
-    price: "820",
-    pictureUrl: "https://i.imgur.com/QxjfMUZ.jpg",
-    tela: "Algodon",
-  },
-];
-
-const ItemDetailContainer= () => {
-  const [detail, getDetail] = useState(productos);
+const ItemDetailContainer = () => {
   const { id: idDetalles } = useParams();
+  const [loading, setLoading] = useState(false);
+  const [items, setItems] = useState([]);
+
+  const getData = () => {
+    setLoading(true);
+    const db = getFirestore();
+
+    const itemCollection = db.collection("Productos");
+    itemCollection
+    .where("id", "==", idDetalles)
+    .get()
+    .then((snap) => {
+      if (snap.size == 0) {
+        console.log("No Hay resultados");
+      }
+   ;
+      snap.forEach((doc) => doc.data());
+      setItems(snap)
+    })
+    .catch((error) => {
+      console.log("Error al traer los items, error");
+    })
+    .finally(() => {
+      setLoading(false);
+    });
 
 
 
-  const productsFilter = () => {
-  
-    const get_Detail =    detail.find((item)=> item.id === parseInt(idDetalles) )
-   
+  }
+console.log(items)
 
-    getDetail(get_Detail)
-  
-  } 
 
   useEffect(() => {
-   
- productsFilter()
- 
-  
-},[idDetalles],
-  )
+  getData()
 
 
- 
+  }, [idDetalles]);
+
   return (
     <div>
-      <ItemDetail detail={detail}  />
+      <ItemDetail items={items} />
     </div>
   );
-
-
-}
-
+};
 
 export default ItemDetailContainer;

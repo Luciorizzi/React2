@@ -1,0 +1,22 @@
+.Carrito {
+  display: inline-flex;
+  justify-content: center;
+  overflow-x: scroll;
+  border-left: 20px;
+  width: 100%
+}
+.Vacio {
+  width: 80%;
+
+  display: inline-block;
+  justify-content: center;
+}
+
+.Agregados {
+    display: flex;
+    justify-content: center;
+    
+}
+.Bloque{
+    display: block;
+}

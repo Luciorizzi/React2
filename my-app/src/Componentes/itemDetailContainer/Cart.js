@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Cartctxt } from "../context/context";
 import { CountCtxt } from "../context/countCtxt";
 import ItemCart from "./itemCart";
+import "./Cart.css";
 
 function Cart() {
   const { cart, clearCart } = useContext(Cartctxt);
@@ -18,30 +19,40 @@ function Cart() {
     clearCount();
   };
 
-  
- 
-
   return (
     <div>
       <p>Carrito</p>
-
-     {cart.length && 
+      {cart.length && (
         <button onClick={clearAll} className="buttonCompra">
           Vaciar carrito
         </button>
-}
-
-      {cart.length &&
-         cart.map((producto) => <ItemCart key={producto.id} producto={producto.select} cantidad={producto.cantidad} />    ) }
-      {!cart.length && (
-        <>
-          <p>No has agregado ningun producto! </p>
-          <Link to="/itemListContainer">
-            <p>Volver a la tienda</p>
-          </Link>
-        </>
       )}
-    </div>
+  
+      <div className="Carrito">
+        {cart.length &&
+          cart.map((producto) => (
+            <ItemCart
+              key={producto.id}
+              producto={producto.select}
+              cantidad={producto.cantidad}
+            />
+          ))}
+    
+      <div>
+        {!cart.length && (
+          <div className="Vacio">
+            <p>No has agregado ningun producto! </p>
+            <Link to="/itemListContainer">
+              <p>Volver a la tienda</p>
+            </Link>
+          </div>
+        )}
+      </div>
+      </div>
+      <p className="Agregados">Productos agregados: {cart.length}</p>
+      </div>
+    
+
   );
 }
 export default Cart;

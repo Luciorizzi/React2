@@ -26,3 +26,16 @@ list-style: none;
     font-family: 'EB Garamond', serif;
    font-family: 'IBM Plex Serif', serif;
 }
+.Feltwell{
+    background-image: url('https://i.imgur.com/ASrLMbf.jpg');
+    height: 400px;
+    display: flex;
+    margin: auto;
+}
+.feltwell{
+    display: flex;
+    margin: auto;
+    background-color: white;
+    width: 350px;
+    height: 120px;
+}

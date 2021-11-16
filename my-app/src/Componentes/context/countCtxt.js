@@ -1,7 +1,6 @@
 import { createContext } from "react";
 import { useState } from "react/cjs/react.development";
-import { useContext } from "react";
-import { Cartctxt } from "./context";
+
 
 
 export const CountCtxt = createContext()

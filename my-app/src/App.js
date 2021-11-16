@@ -11,6 +11,7 @@ import Countcontext from "./Componentes/context/countCtxt";
 
 function App() {
   return (
+ 
     <CartContext>
       <BrowserRouter>
         <Countcontext>
@@ -42,6 +43,52 @@ function App() {
         </Countcontext>
       </BrowserRouter>
     </CartContext>
+ 
   );
 }
 export default App;
+
+
+ /* const crearDataLote = () => {
+    const db = getFirestore();
+
+    const documentCollection = db.collection("contacts").doc();
+
+    const buzoRojo = {
+      id: 1,
+      title: "Rojo",
+      photo: "https://i.imgur.com/LoV9GY1.jpg?2",
+      price: 890,
+      tela: "Algodon",
+    };
+    const buzoAzul = {
+      id: 2,
+      title: "Azul",
+      photo: "https://i.imgur.com/aqMpiFN.jpg?1",
+      price: 870,
+      tela: "Algodon",
+    };
+    const buzoCrema = {
+      id: 3,
+      title: "Crema",
+      photo: "https://i.imgur.com/4vD58zI.jpg",
+      price: 860,
+      tela: "Algodon",
+    };
+    const batch = db.batch();
+    batch.set(documentCollection, buzoRojo);
+    batch.set(documentCollection, buzoAzul);
+    batch.set(documentCollection, buzoCrema);
+
+    batch
+      .commit()
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+  crearDataLote();*/
+
+
