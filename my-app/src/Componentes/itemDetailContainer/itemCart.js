@@ -18,7 +18,7 @@ const ItemCart = ({ producto, cantidad }) => {
     setCant(cantidad);
   }, [cantidad]);
   return (
-    <div className="classCart">
+    <div className="className=Cart">
       <div className="contenedor2">
         <button className=" X " onClick={() => removeItem(id)}>
           X

@@ -8,17 +8,31 @@ h2 {
 }
 
 p{
-
-    text-align: center;
-    padding-top: 60pt;
-    font-size: 16px;
+    color:white;
+    text-align: left ;
+    font-size: 20px;
     font-family: 'EB Garamond', serif;
     font-family: 'IBM Plex Serif', serif;
 }
 
 
 .imgContacto{
+    width: 100%;
+    background-image: url("https://i.imgur.com/FliDkaZ.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+ height: 1000px;
+}
+
+.contact{
     display: flex;
     margin: auto;
-
+    margin-top: 200px;
+    background-color: black;
+    width: 700px;
+    height: 300px;
+}
+.input{
+    width: 300px;
+    height: 100px;
 }

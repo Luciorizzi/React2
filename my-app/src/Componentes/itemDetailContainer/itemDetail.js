@@ -4,20 +4,11 @@ import React from "react";
 import RenderItemCount from "../itemListContainer/contador/renderItemCount";
 import { useEffect, useState } from "react/cjs/react.development";
 
-function ItemDetail({ items, idDetalles }) {
-const [detail, getDetail] = useState([])
-  console.log(items);
-console.log(idDetalles)
+function ItemDetail({ detail, idDetalles }) {
 
-const productsFilter= () => {
-  const items1 = items.find((item) => item.id === parseInt (idDetalles))
-getDetail(items1)
-console.log(detail)
-}
 
-useEffect (() => {
-  productsFilter()
-})
+
+
   return (
 
   <div>

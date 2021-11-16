@@ -2,18 +2,23 @@ import "./About.css";
 
 function About() {
   return (
-    <div>
-      <h2>Contacto </h2>
+    <>
+      <div className="imgContacto">
+        <h2>Contacto </h2>
+        <div className="contact">
+          <p>
+            Contamos con un equipo de especialistas en brindar una excelñente
+            atencion al publico.
+          </p>
+          <form>
+          <input className="input" placeholder="Email"></input>
+          <input className="input" placeholder="Nombre y Apellido"></input>
+          <input className="input" placeholder="Comentario"></input>
 
-      <p>but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      <img  class="imgContacto"src="https://i.imgur.com/FliDkaZ.png" title="source: imgur.com"  alt=""/>
-    
-    
-    
-    
-    
-    
-    </div>
+          </form>
+        </div>
+      </div>
+    </>
   );
 }
 

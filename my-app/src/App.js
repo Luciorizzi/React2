@@ -8,7 +8,7 @@ import ItemDetailContainer from "./Componentes/itemDetailContainer/itemDetailCon
 import Cart from "./Componentes/itemDetailContainer/Cart";
 import CartContext from "./Componentes/context/context";
 import Countcontext from "./Componentes/context/countCtxt";
-
+import Footer from "./Componentes/Navbar/Footer/footer";
 function App() {
   return (
  
@@ -40,7 +40,8 @@ function App() {
               <Cart />
             </Route>
           </Switch>
-        </Countcontext>
+        <Footer/>
+       </Countcontext>
       </BrowserRouter>
     </CartContext>
  

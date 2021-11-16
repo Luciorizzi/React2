@@ -9,23 +9,22 @@ import { collection, query, where, getDocs } from "firebase/firestore";
 const ItemDetailContainer = () => {
   const { id: idDetalles } = useParams();
   const [loading, setLoading] = useState(false);
-  const [items, setItems] = useState([]);
+  const [detail, setDetail] = useState([]);
 
   const getData = () => {
     setLoading(true);
     const db = getFirestore();
 
     const itemCollection = db.collection("Productos");
-    itemCollection
-   
+    itemCollection.where("id", "==", parseInt(idDetalles))
     .get()
-    .then((snap) => {
-      if (snap.size == 0) {
-        console.log("No Hay resultados");
-      }
-   ;
-      setItems(snap.docs.map((doc) => doc.data() ));
-   
+    .then((querySnapshot) => {
+   querySnapshot.docs.map((doc) => {
+     setDetail(doc.id, "=>", doc.data())
+     console.log(doc)
+   })
+      
+      
     })
     .catch((error) => {
       console.log("Error al traer los items, error");
@@ -33,25 +32,16 @@ const ItemDetailContainer = () => {
     .finally(() => {
       setLoading(false);
     });
+}
+console.log(detail)
 
-
-
-  }
-console.log(items)
-
-
-
-
-
-  useEffect(() => {
-  getData()
-
-
-  }, [idDetalles]);
+useEffect(() => {
+  getData();
+}, [idDetalles]);
 
   return (
     <div>
-      <ItemDetail items={items} idDetalles= {idDetalles} />
+      <ItemDetail detail={detail} idDetalles= {idDetalles} />
     </div>
   );
 };
