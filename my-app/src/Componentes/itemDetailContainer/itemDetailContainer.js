@@ -17,15 +17,15 @@ const ItemDetailContainer = () => {
 
     const itemCollection = db.collection("Productos");
     itemCollection
-    .where("id", "==", idDetalles)
+   
     .get()
     .then((snap) => {
       if (snap.size == 0) {
         console.log("No Hay resultados");
       }
    ;
-      snap.forEach((doc) => doc.data());
-      setItems(snap)
+      setItems(snap.docs.map((doc) => doc.data() ));
+   
     })
     .catch((error) => {
       console.log("Error al traer los items, error");
@@ -40,6 +40,9 @@ const ItemDetailContainer = () => {
 console.log(items)
 
 
+
+
+
   useEffect(() => {
   getData()
 
@@ -48,7 +51,7 @@ console.log(items)
 
   return (
     <div>
-      <ItemDetail items={items} />
+      <ItemDetail items={items} idDetalles= {idDetalles} />
     </div>
   );
 };
