@@ -45,9 +45,9 @@
 <div className="widget no-box">
 <h5 className="widget-title">Contact Us<span></span></h5>
 <ul className ="redes">
-    <li><img className="redesImg" src="https://i.imgur.com/Nnk4wYz.png" alt="facebook"href="https://www.facebook.com/" /></li>
-    <li><img  className="redesImg" src="https://i.imgur.com/HEPNX5P.png" alt ="twitter" href="https://twitter.com/home"/></li>
-    <li><img className="redesImg" src="https://i.imgur.com/Jpn0gT4.png"  alt="instagram" href="https://www.instagram.com/?hl=es"/></li>
+    <li><a href="https://www.facebook.com/" ><img className="redesImg" src="https://i.imgur.com/Nnk4wYz.png" alt="facebook"/></a></li>
+    <li><a  href="https://twitter.com/home"><img  className="redesImg" src="https://i.imgur.com/HEPNX5P.png" alt ="twitter"/></a></li>
+    <li><a href="https://www.instagram.com/?hl=es"><img className="redesImg" src="https://i.imgur.com/Jpn0gT4.png"  alt="instagram"/></a></li>
     <li><a href="mailto:info@domain.com" title="glorythemes">feltwell@argentina.com</a></li>
 </ul>
 

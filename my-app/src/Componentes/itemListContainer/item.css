@@ -1,6 +1,7 @@
 #buzo{
    display: flex;
    justify-content: space-between ;
+   white-space: pre-line;
 }
 
 .description{

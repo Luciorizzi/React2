@@ -17,15 +17,17 @@ const ItemDetailContainer = () => {
 
     const itemCollection = db.collection("Productos");
     itemCollection.where("id", "==", parseInt(idDetalles))
-    .get()
+    .get() 
     .then((querySnapshot) => {
    querySnapshot.docs.map((doc) => {
-     setDetail(doc.id, "=>", doc.data())
+     setDetail(doc.data())
+
      console.log(doc)
    })
-      
+    
       
     })
+   
     .catch((error) => {
       console.log("Error al traer los items, error");
     })

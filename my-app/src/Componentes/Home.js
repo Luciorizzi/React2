@@ -46,7 +46,7 @@ function Home() {
 <div className="gallery">
 
   <div className="gallery-item">
-    <img className="gallery-image" src="https://i.imgur.com/de9IGZg.jpg" alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer"/>
+    <img className="gallery-image" src="https://i.imgur.com/xSu3eug.jpg" alt="person writing in a notebook beside by an iPad, laptop, printed photos, spectacles, and a cup of coffee on a saucer"/>
   </div>
 
   <div className="gallery-item">

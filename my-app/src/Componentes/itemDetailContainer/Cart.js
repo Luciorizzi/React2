@@ -21,7 +21,7 @@ function Cart() {
 
   return (
     <div>
-      <p>Carrito</p>
+      <p className="carritoP">Carrito</p>
       {cart.length && (
         <button onClick={clearAll} className="buttonCompra">
           Vaciar carrito
@@ -41,15 +41,15 @@ function Cart() {
       <div>
         {!cart.length && (
           <div className="Vacio">
-            <p>No has agregado ningun producto! </p>
+            <p className="carritoP">No has agregado ningun producto! </p>
             <Link to="/itemListContainer">
-              <p>Volver a la tienda</p>
+              <p className="carritoP">Volver a la tienda</p>
             </Link>
           </div>
         )}
       </div>
       </div>
-      <p className="Agregados">Productos agregados: {cart.length}</p>
+      <p className="Agregados carritoP">Productos agregados: {cart.length}</p>
       </div>
     
 
