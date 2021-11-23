@@ -1,4 +1,4 @@
-import { useContext, useState } from "react/cjs/react.development";
+import {  useState } from "react/cjs/react.development";
 import { useEffect } from "react";
 import Item from "./item";
 import "./item.css"
@@ -11,6 +11,7 @@ function ItemList() {
   const [loading, setLoading] = useState(false);
   const [items, setItems] = useState([]);
 
+  console.log(loading)
   const getData = () => {
   setLoading(true);
   const db = getFirestore();

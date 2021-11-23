@@ -25,7 +25,7 @@ function Cart() {
     <div>
       <p className="carritoP">Carrito</p>
      
-            <Total />
+            <Total  />
             
              
           

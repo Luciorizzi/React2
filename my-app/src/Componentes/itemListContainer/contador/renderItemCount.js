@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react/cjs/react.development";
+import { useContext,  useState } from "react/cjs/react.development";
 import Botones from "./contador";
 import { Cartctxt } from "../../context/context";
 import { CountCtxt } from "../../context/countCtxt";
