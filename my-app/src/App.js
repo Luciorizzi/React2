@@ -9,12 +9,14 @@ import Cart from "./Componentes/itemDetailContainer/Cart";
 import CartContext from "./Componentes/context/context";
 import Countcontext from "./Componentes/context/countCtxt";
 import Footer from "./Componentes/Navbar/Footer/footer";
+
 function App() {
   return (
  
     <CartContext>
       <BrowserRouter>
         <Countcontext>
+     
           <Navbar />
           <Switch>
             <Route exact path="/">
@@ -41,6 +43,7 @@ function App() {
             </Route>
           </Switch>
         <Footer/>
+   
        </Countcontext>
       </BrowserRouter>
     </CartContext>

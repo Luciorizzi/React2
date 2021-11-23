@@ -4,6 +4,7 @@ import { Cartctxt } from "../context/context";
 import { CountCtxt } from "../context/countCtxt";
 import ItemCart from "./itemCart";
 import "./Cart.css";
+import Total from "./total";
 
 function Cart() {
   const { cart, clearCart } = useContext(Cartctxt);
@@ -18,16 +19,24 @@ function Cart() {
     clearCart();
     clearCount();
   };
+  
 
   return (
     <div>
       <p className="carritoP">Carrito</p>
+     
+            <Total />
+            
+             
+          
+
       {cart.length && (
         <button onClick={clearAll} className="buttonCompra">
           Vaciar carrito
         </button>
       )}
   
+
       <div className="Carrito">
         {cart.length &&
           cart.map((producto) => (
@@ -35,7 +44,7 @@ function Cart() {
               key={producto.id}
               producto={producto.select}
               cantidad={producto.cantidad}
-            />
+            /> 
           ))}
     
       <div>
