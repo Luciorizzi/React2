@@ -23,12 +23,12 @@ function RenderItemCount({ detail }) {
   const addToCart = (detail) => {
     console.log(`detail`, detail);
     console.log(`producto`, producto);
-console.log(producto.subtotal)
+
     setCount(1)
   
 
      const check = cart.length  &&  cart.find((producto) => producto.id === detail.id);
- 
+
  ;
     console.log( `check`, check);
    
@@ -44,6 +44,13 @@ console.log(producto.subtotal)
       setRenderCount(false);
      producto.cantidad   = check.cantidad + count
      producto.subtotal = check.cantidad * producto.subtotal
+
+     const index = cart.findIndex((producto => producto.id === check.id))
+
+      
+     cart.splice(index, 1)
+
+
 
       setCart ([...cart, producto])
   

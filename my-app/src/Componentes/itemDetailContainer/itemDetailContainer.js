@@ -7,11 +7,11 @@ import { getFirestore } from "../../firebase/index";
 
 const ItemDetailContainer = () => {
   const { id: idDetalles } = useParams();
-  const [loading, setLoading] = useState(false);
+
   const [detail, setDetail] = useState([]);
-  console.log(loading);
+
   const getData = () => {
-    setLoading(true);
+  
     const db = getFirestore();
 
     const itemCollection = db.collection("Productos");
@@ -22,21 +22,19 @@ const ItemDetailContainer = () => {
         querySnapshot.docs.map((doc) => {
           setDetail(doc.data());
 
-          console.log(doc);
+          
         });
       })
 
       .catch((error) => {
         console.log("Error al traer los items, error");
       })
-      .finally(() => {
-        setLoading(false);
-      });
+     
   };
-  console.log(detail);
-
+ 
   useEffect(() => {
     getData();
+
   });
 
   return (

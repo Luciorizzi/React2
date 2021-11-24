@@ -7,6 +7,10 @@ const ItemCart = ({ producto, cantidad }) => {
   const { id } = producto;
   const [cant, setCant] = useState();
 
+
+
+
+  
   console.log(producto);
   const removeItem = () => {
     const item = cart.filter((producto) => producto.id !== id);

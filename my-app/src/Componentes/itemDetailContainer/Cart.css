@@ -28,3 +28,14 @@
   color: black;
   font-size: 16px;
 }
+.carritoTotal{
+  display: inline;
+ margin-left: 10px;
+  color: black;
+  font-size: 26px;
+  height: 350px;
+  text-decoration: underline black ;
+
+
+}
+

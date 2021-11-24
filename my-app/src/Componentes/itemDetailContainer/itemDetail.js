@@ -3,7 +3,7 @@ import "./itemDetail.css";
 import React from "react";
 import RenderItemCount from "../itemListContainer/contador/renderItemCount";
 
-function ItemDetail({ detail, idDetalles }) {
+function ItemDetail({ detail }) {
   return (
     <div>
       <div className="contenedor1">

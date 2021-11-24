@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Cartctxt } from "../context/context";
 import { CountCtxt } from "../context/countCtxt";
@@ -19,23 +19,23 @@ function Cart() {
     clearCart();
     clearCount();
   };
-  
+
+  const canti = true;
 
   return (
     <div>
       <p className="carritoP">Carrito</p>
-     
-            <Total  />
-            
-             
-          
 
       {cart.length && (
         <button onClick={clearAll} className="buttonCompra">
           Vaciar carrito
         </button>
       )}
-  
+    
+        <Total
+      
+        />
+    
 
       <div className="Carrito">
         {cart.length &&
@@ -44,24 +44,22 @@ function Cart() {
               key={producto.id}
               producto={producto.select}
               cantidad={producto.cantidad}
-            /> 
+            />
           ))}
-    
-      <div>
-        {!cart.length && (
-          <div className="Vacio">
-            <p className="carritoP">No has agregado ningun producto! </p>
-            <Link to="/itemListContainer">
-              <p className="carritoP">Volver a la tienda</p>
-            </Link>
-          </div>
-        )}
-      </div>
+
+        <div>
+          {!cart.length && (
+            <div className="Vacio">
+              <p className="carritoP">No has agregado ningun producto! </p>
+              <Link to="/itemListContainer">
+                <p className="carritoP">Volver a la tienda</p>
+              </Link>
+            </div>
+          )}
+        </div>
       </div>
       <p className="Agregados carritoP">Productos agregados: {cart.length}</p>
-      </div>
-    
-
+    </div>
   );
 }
 export default Cart;
