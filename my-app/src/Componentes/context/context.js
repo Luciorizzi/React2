@@ -3,21 +3,18 @@ import { useState } from "react/cjs/react.development";
 
 export const Cartctxt = createContext();
 
+const CartContext = ({ children }) => {
+  const [cart, setCart] = useState([]);
 
-
-const CartContext = ({children} ) => { 
-    const [cart , setCart] =  useState([])
-
-    const clearCart = () => {
-      setCart([])}
-
-
+  const clearCart = () => {
+    setCart([]);
+  };
 
   return (
-  <Cartctxt.Provider value= { {cart, setCart , clearCart }}>
-  {children}
-  </ Cartctxt.Provider>
-  )
+    <Cartctxt.Provider value={{ cart, setCart, clearCart }}>
+      {children}
+    </Cartctxt.Provider>
+  );
 };
 
 export default CartContext;

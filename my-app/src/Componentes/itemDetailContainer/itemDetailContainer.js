@@ -11,7 +11,6 @@ const ItemDetailContainer = () => {
   const [detail, setDetail] = useState([]);
 
   const getData = () => {
-  
     const db = getFirestore();
 
     const itemCollection = db.collection("Productos");
@@ -21,20 +20,16 @@ const ItemDetailContainer = () => {
       .then((querySnapshot) => {
         querySnapshot.docs.map((doc) => {
           setDetail(doc.data());
-
-          
         });
       })
 
       .catch((error) => {
         console.log("Error al traer los items, error");
-      })
-     
+      });
   };
- 
+
   useEffect(() => {
     getData();
-
   });
 
   return (

@@ -1,10 +1,8 @@
 .Carrito {
   display: inline-block;
- 
+
   border-left: 20px;
   width: 100%;
-
- 
 }
 .Vacio {
   width: 100%;
@@ -14,28 +12,26 @@
 }
 
 .Agregados {
-    display: flex;
-    justify-content: center;
-    
+  display: flex;
+  color: black;
+  padding-top: 20px;
+  margin-left: 10px;
 }
-.Bloque{
-    display: block;
+.Bloque {
+  display: block;
 }
 
-.carritoP{
+.carritoP {
   display: flex;
   justify-content: center;
   color: black;
   font-size: 16px;
 }
-.carritoTotal{
+.carritoTotal {
   display: inline;
- margin-left: 10px;
+  margin-left: 10px;
   color: black;
   font-size: 26px;
   height: 350px;
-  text-decoration: underline black ;
-
-
+  text-decoration: underline black;
 }
-

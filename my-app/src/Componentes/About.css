@@ -1,38 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=IBM+Plex+Serif:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=IBM+Plex+Serif:wght@700&display=swap");
 h2 {
-    text-align: center;
-   color: black;
-   font-size: 80px;
-   font-family: 'EB Garamond', serif;
-   font-family: 'IBM Plex Serif', serif;
+  text-align: center;
+  color: black;
+  font-size: 80px;
+  font-family: "EB Garamond", serif;
+  font-family: "IBM Plex Serif", serif;
 }
 
-p{
-    color:white;
-    text-align: left ;
-    font-size: 20px;
-    font-family: 'EB Garamond', serif;
-    font-family: 'IBM Plex Serif', serif;
+p {
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  font-family: "EB Garamond", serif;
+  font-family: "IBM Plex Serif", serif;
 }
 
-
-.imgContacto{
-    width: 100%;
-    background-image: url("https://i.imgur.com/FliDkaZ.png");
-    background-size: cover;
-    background-repeat: no-repeat;
- height: 1000px;
+.imgContacto {
+  width: 100%;
+  background-image: url("https://i.imgur.com/FliDkaZ.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 1000px;
 }
 
-.contact{
-    display: flex;
-    margin: auto;
-    margin-top: 200px;
-    background-color: black;
-    width: 700px;
-    height: 300px;
+.contact {
+  display: flex;
+  margin: auto;
+  margin-top: 200px;
+  background-color: black;
+  width: 700px;
+  height: 300px;
 }
-.input{
-    width: 300px;
-    height: 100px;
+.input {
+  width: 300px;
+  height: 100px;
 }

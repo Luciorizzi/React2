@@ -1,53 +1,50 @@
-.contador{
+.contador {
   display: flex;
   margin: auto;
   width: 200px;
   height: 50px;
   border: solid 0.5px lightgray;
 }
-#numero{
-    display: flex;
-    margin: auto;
-    font-size: 16px;
+#numero {
+  display: flex;
+  margin: auto;
+  font-size: 16px;
 }
 
-.agregar{
-    display: flex;
-    margin: auto;
+.agregar {
+  display: flex;
+  margin: auto;
 }
 
-.containerAgregar{
-    margin-top: 10pt;
+.containerAgregar {
+  margin-top: 10pt;
 }
 
-.containerAll{
-    width: 200px;
-    margin: auto;
-   
-
+.containerAll {
+  width: 200px;
+  margin: auto;
 }
 
-
-.button{
-    color: black;
-    border: solid 0.5px lightgray;
-    background-color: white;
+.button {
+  color: black;
+  border: solid 0.5px lightgray;
+  background-color: white;
 }
 
-.button:hover{
-background-color: lightgray;
+.button:hover {
+  background-color: lightgray;
 }
 
-.X{
-    display:inline;
-    margin-left: 90%;
-    margin-top: 2%;
-    color: black;
-    background-color: white;
-    border: none;
-    font-size: 18px;
+.X {
+  display: inline;
+  margin-left: 90%;
+  margin-top: 2%;
+  color: black;
+  background-color: white;
+  border: none;
+  font-size: 18px;
 }
 
-.X:hover{
-    background-color: rgb(221, 94, 94);
-    }
+.X:hover {
+  background-color: rgb(221, 94, 94);
+}

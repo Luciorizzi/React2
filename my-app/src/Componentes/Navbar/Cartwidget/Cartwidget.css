@@ -1,9 +1,7 @@
-.carrito{
-    width: 200px;
-    display: inline;
-    padding: 10px;
-    text-decoration: solid;
-    color: black;
+.carrito {
+  width: 200px;
+  display: inline;
+  padding: 10px;
+  text-decoration: solid;
+  color: black;
 }
-
-

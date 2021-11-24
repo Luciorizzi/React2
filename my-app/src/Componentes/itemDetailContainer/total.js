@@ -4,14 +4,11 @@ import { Cartctxt } from "../context/context";
 const Total = () => {
   const { cart } = useContext(Cartctxt);
 
+  const cambio = cart.map(
+    (producto) => producto.select.price * producto.cantidad
+  );
 
-
-
-  const cambio =cart.map((producto) => producto.select.price * producto.cantidad );
-
-
-
-console.log(cambio)
+  console.log(cambio);
 
   const sumaPrecios = cambio.reduce((prev, next) => prev + next, 0);
 

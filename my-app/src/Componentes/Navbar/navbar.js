@@ -39,14 +39,14 @@ function Navbar() {
                   </p>
                 </Link>
               </li>
-              <li className="nav-item">
+              <li className="nav-item  ">
                 <Link to="/ItemListContainer">
-                  <p className="nav-link active outDecoration">Divers</p>
+                  <p className="nav-link active outDecoration ">Divers</p>
                 </Link>
               </li>
               <li className="nav-item">
                 <Link to="/About">
-                  <p className="nav-link active">About</p>
+                  <p className="nav-link active outDecoration">About</p>
                 </Link>
               </li>
             </ul>

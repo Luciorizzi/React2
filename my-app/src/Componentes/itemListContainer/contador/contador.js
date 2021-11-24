@@ -1,38 +1,35 @@
 import { CountCtxt } from "../../context/countCtxt";
-import { useContext } from "react"
-import "./contador.css"
+import { useContext } from "react";
+import "./contador.css";
 
+const Botones = () => {
+  const { count, setCount } = useContext(CountCtxt);
 
- const Botones =( ) =>{
-  const {count, setCount}= useContext(CountCtxt)
- 
-  function addCant(){
-    if (count < 15){
-      setCount(count +1)
-
+  function addCant() {
+    if (count < 15) {
+      setCount(count + 1);
     }
   }
 
-function restCant (){
-  if (count > 1){
-    setCount(count  -1 )
+  function restCant() {
+    if (count > 1) {
+      setCount(count - 1);
+    }
   }
-}
 
-  
-
-  
-
-
-    return <div  className="containerAll">
-    <div className="contador"  >
-      <button className="button" onClick={ restCant} >-</button>
-    <div id="numero">{count} </div>
-      <button className="button" onClick={addCant}>+</button>
+  return (
+    <div className="containerAll">
+      <div className="contador">
+        <button className="button" onClick={restCant}>
+          -
+        </button>
+        <div id="numero">{count} </div>
+        <button className="button" onClick={addCant}>
+          +
+        </button>
+      </div>
     </div>
-    </div>
-}
+  );
+};
 
-
-
-export default Botones
+export default Botones;

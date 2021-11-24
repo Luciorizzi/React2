@@ -1,66 +1,49 @@
-import { useContext,  useState } from "react/cjs/react.development";
+import { useContext, useState } from "react/cjs/react.development";
 import Botones from "./contador";
 import { Cartctxt } from "../../context/context";
 import { CountCtxt } from "../../context/countCtxt";
 
-
-
-
-
 function RenderItemCount({ detail }) {
   const [renderCount, setRenderCount] = useState(true);
 
-  
   const { count, setCount } = useContext(CountCtxt);
   const { cart, setCart } = useContext(Cartctxt);
- 
 
-  const producto = { select: detail, cantidad:count, id: detail.id , subtotal: detail.price};
-
-
-  
+  const producto = {
+    select: detail,
+    cantidad: count,
+    id: detail.id,
+    subtotal: detail.price,
+  };
 
   const addToCart = (detail) => {
     console.log(`detail`, detail);
     console.log(`producto`, producto);
 
-    setCount(1)
-  
+    setCount(1);
 
-     const check = cart.length  &&  cart.find((producto) => producto.id === detail.id);
+    const check =
+      cart.length && cart.find((producto) => producto.id === detail.id);
 
- ;
-    console.log( `check`, check);
-   
-  
+    console.log(`check`, check);
 
-    if (check === 0  || check === undefined) {
+    if (check === 0 || check === undefined) {
       setRenderCount(false);
-      
+
       setCart([...cart, producto]);
-      
-    
-    } else{
+    } else {
       setRenderCount(false);
-     producto.cantidad   = check.cantidad + count
-     producto.subtotal = check.cantidad * producto.subtotal
+      producto.cantidad = check.cantidad + count;
+      producto.subtotal = check.cantidad * producto.subtotal;
 
-     const index = cart.findIndex((producto => producto.id === check.id))
+      const index = cart.findIndex((producto) => producto.id === check.id);
 
-      
-     cart.splice(index, 1)
+      cart.splice(index, 1);
 
-
-
-      setCart ([...cart, producto])
-  
-
-
+      setCart([...cart, producto]);
     }
-    console.log(`cart`,cart);
-    
+    console.log(`cart`, cart);
   };
-
 
   return (
     <div>

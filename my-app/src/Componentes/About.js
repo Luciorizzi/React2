@@ -11,10 +11,9 @@ function About() {
             atencion al publico.
           </p>
           <form>
-          <input className="input" placeholder="Email"></input>
-          <input className="input" placeholder="Nombre y Apellido"></input>
-          <input className="input" placeholder="Comentario"></input>
-
+            <input className="input" placeholder="Email"></input>
+            <input className="input" placeholder="Nombre y Apellido"></input>
+            <input className="input" placeholder="Comentario"></input>
           </form>
         </div>
       </div>

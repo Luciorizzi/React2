@@ -1,30 +1,25 @@
-#buzo{
-   display: flex;
-   justify-content: space-between ;
-   white-space: pre-line;
+#buzo {
+  display: flex;
+  justify-content: space-between;
+  white-space: pre-line;
 }
 
-.description{
- padding:1px;
- display: flex;
-justify-content: center;
-
-    
-    
+.description {
+  padding: 1px;
+  display: flex;
+  justify-content: center;
 }
 
-.contenedor{
-    width: 400px;
-    height: 600px;
-    padding: 30px;
-   box-shadow: 20px 20px 15px 1px rgb(190, 187, 187);
+.contenedor {
+  width: 400px;
+  height: 600px;
+  padding: 30px;
+  box-shadow: 20px 20px 15px 1px rgb(190, 187, 187);
 }
 
-
-.img{
-    display: flex;
-    margin: auto;
-    width: 300px;
-    height: 405px;
+.img {
+  display: flex;
+  margin: auto;
+  width: 300px;
+  height: 405px;
 }
-

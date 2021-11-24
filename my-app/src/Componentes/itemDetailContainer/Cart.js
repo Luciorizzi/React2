@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Cartctxt } from "../context/context";
 import { CountCtxt } from "../context/countCtxt";
@@ -20,8 +20,6 @@ function Cart() {
     clearCount();
   };
 
-  const canti = true;
-
   return (
     <div>
       <p className="carritoP">Carrito</p>
@@ -31,11 +29,9 @@ function Cart() {
           Vaciar carrito
         </button>
       )}
-    
-        <Total
-      
-        />
-    
+
+      <Total />
+      <p className="Agregados">Productos agregados: {cart.length}</p>
 
       <div className="Carrito">
         {cart.length &&
@@ -58,7 +54,6 @@ function Cart() {
           )}
         </div>
       </div>
-      <p className="Agregados carritoP">Productos agregados: {cart.length}</p>
     </div>
   );
 }

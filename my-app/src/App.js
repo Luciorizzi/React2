@@ -12,11 +12,9 @@ import Footer from "./Componentes/Navbar/Footer/footer";
 
 function App() {
   return (
- 
     <CartContext>
       <BrowserRouter>
         <Countcontext>
-     
           <Navbar />
           <Switch>
             <Route exact path="/">
@@ -42,18 +40,15 @@ function App() {
               <Cart />
             </Route>
           </Switch>
-        <Footer/>
-   
-       </Countcontext>
+          <Footer />
+        </Countcontext>
       </BrowserRouter>
     </CartContext>
- 
   );
 }
 export default App;
 
-
- /* const crearDataLote = () => {
+/* const crearDataLote = () => {
     const db = getFirestore();
 
     const documentCollection = db.collection("contacts").doc();
@@ -94,5 +89,3 @@ export default App;
       });
   };
   crearDataLote();*/
-
-
